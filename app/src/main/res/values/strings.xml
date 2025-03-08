@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Assignment2</string>
+    <string name="title">Welcome to Swinburne musical instruments studio</string>
+    <string name="borrowTitle">ℹ️ Information</string>
+    <string name="nextButton">Next</string>
+    <string name="borrowButton">Borrow</string>
+    <string name="instrumentImage">Electric Guitar</string>
+    <string name="saveButton">Save</string>
+    <string name="cancelButton">Cancel</string>
+    <string name="title_activity_rental_items">RentalItems</string>
+</resources>
