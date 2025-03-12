@@ -8,58 +8,84 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/instrumentImage"
-        android:layout_width="209dp"
-        android:layout_height="221dp"
+        android:layout_width="179dp"
+        android:layout_height="139dp"
         android:contentDescription="@string/instrumentImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198"
+        app:layout_constraintVertical_bias="0.184"
         app:srcCompat="@drawable/guitar" />
 
     <TextView
         android:id="@+id/instrumentName"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Electric Guitar"
-        style="@style/TextStyle"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintVertical_bias="0.159" />
 
+    <RadioGroup
+        android:id="@+id/instrumentAttributeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:background="#9EA3A3"
+        app:layout_constraintBottom_toTopOf="@+id/instrumentRate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instrumentName"
+        app:layout_constraintVertical_bias="0.441">
+
+
+        <RadioButton
+            android:id="@+id/instrumentAttributeRadio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/instrumentAttributeRadio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+         />
+    </RadioGroup>
 
     <RatingBar
         android:id="@+id/instrumentRate"
-        android:layout_width="231dp"
+        android:layout_width="240dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginBottom="532dp"
         android:isIndicator="true"
         android:numStars="5"
         android:progressBackgroundTint="#DED4D4"
         android:stepSize="0.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/instrumentPrice"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="196dp"
-        android:text="Price: 50 credits"
-        style="@style/TextStyle"
+        android:layout_marginBottom="472dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instrumentRate" />
 
     <Button
         android:id="@+id/nextButton"
@@ -69,30 +95,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/instrumentAttributeGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_marginBottom="320dp"
-        android:background="#9EA3A3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <RadioButton
-            android:id="@+id/instrumentAttributeRadio2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="With Amp" />
-
-        <RadioButton
-            android:id="@+id/instrumentAttributeRadio1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Extra Strings" />
-    </RadioGroup>
 
 
     <TextView
@@ -118,16 +120,25 @@
 
     <TextView
         android:id="@+id/itemID"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextStyle"
-        android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426" />
+        app:layout_constraintVertical_bias="0.336" />
 
+    <TextView
+        android:id="@+id/instrumentDescription"
+        style="@style/TextStyle"
+        android:layout_width="286dp"
+        android:layout_height="126dp"
+        android:layout_marginBottom="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

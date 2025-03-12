@@ -9,7 +9,8 @@ data class RentalItem(
     val name: String,
     val rating: Float, // 0-5
     val attributes: List<String>, // Multi-choice attributes
-    val price: Int // Monthly price in "credits"
+    val price: Int, // Monthly price in "credits"
+    val description : String // Description of the item
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
@@ -17,7 +18,8 @@ data class RentalItem(
         parcel.readString()!!,
         parcel.readFloat(),
         parcel.createStringArrayList()!!,
-        parcel.readInt()
+        parcel.readInt(),
+        parcel.readString()!!
     )
     // write to Parcel function
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -27,6 +29,7 @@ data class RentalItem(
         parcel.writeFloat(rating)
         parcel.writeStringList(attributes)
         parcel.writeInt(price)
+        parcel.writeString(description)
     }
     //describe Content
     override fun describeContents(): Int = 0
